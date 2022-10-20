@@ -6,6 +6,7 @@ const hercule = {
     department : 75,
     arm : 60.5,
     inRelationship : true,
+    
 
 //ETAPE 3
     amis : [
@@ -15,19 +16,24 @@ const hercule = {
         'Déjanire ',
     ],
 
-}
-
-base.fillProfil(hercule); 
-base.printFriends(hercule.amis);
-base.setBestFriend(hercule.amis[0]);
-
+    init : function(){
+        base.fillProfil(hercule); 
+        base.printFriends(hercule.amis);
+        base.setBestFriend(hercule.amis[0]);
 
 // ETAPE 4
-const h1 = document.createElement('h1');
-h1.classList.add('banner__title');
-h1.textContent = 'Vous consultez le profil de Hercule';
-const headerBanner = document.getElementById('header-banner');
-headerBanner.appendChild(h1);
+    hercule.headerBanner = document.getElementById('header-banner');
+    hercule.h1 = document.createElement('h1');
+    hercule.h1.textContent = 'Vous consultez le profil de Hercule';
+    hercule.headerBanner.appendChild(h1);
+    }
+
+}
+
+
+
+
+
 
 // ETAPE 5
 let i=0;
