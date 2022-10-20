@@ -56,3 +56,18 @@ const profilName = document.getElementById('profil-name');
 profilName.textContent = `${pseudo}`;
 
 // ETAPE 8
+const menu = document.getElementById('menu-toggler');
+menu.addEventListener('click', function(event){
+    if(menu){
+        headerBanner.classList.toggle('banner--open');
+    }
+})
+
+// ETAPE 9
+const contact = document.getElementById('contact');
+contact.addEventListener('click', function(event){
+    event.preventDefault();
+    alert('Hercule ne souhaite pas être dérangé');
+})
+
+// ETAPE 10
