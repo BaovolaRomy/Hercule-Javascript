@@ -71,3 +71,25 @@ contact.addEventListener('click', function(event){
 })
 
 // ETAPE 10
+// affichage des calculs dans les 2 éléments
+
+// Hercule
+const pourcentageHercule = (base.vote.hercule/(base.vote.hercule+base.vote.cesar))*100;
+const trendsHercule = document.querySelector('#trends-hercule :nth-child(2)');
+const peoplePopularityHercule = document.querySelector('.people__popularity');
+trendsHercule.innerHTML = parseInt(`${pourcentageHercule}-%`);
+const elementHercule = document.querySelector('#trends-hercule :nth-child(3)');
+const barreHercule = document.querySelector('.people__bar');
+document.querySelector('#trends-hercule :nth-child(3)').style.width = "69%";
+
+
+// Cesar
+const pourcentageCesar = (base.vote.cesar/(base.vote.hercule+base.vote.cesar))*100;
+const trendCesar = document.querySelector('#trends-cesar :nth-child(2)');
+console.log(trendCesar);
+trendCesar.id = 'cesar';
+trendCesar.innerHTML= parseInt(`${pourcentageCesar} "%"`);
+const elementCesar = document.querySelector('#trends-cesar :nth-child(3)');
+elementCesar.id = 'barreCesar';
+document.getElementById('barreCesar').style.width = (`${pourcentageCesar}`);
+
